@@ -12,7 +12,7 @@ namespace EstudosAsp.Models
     {
         [Key]
         [Column("id")]
-        public int Id { get; set; }
+        private int Id { get; }
 
         [Required]
         [Index(IsUnique = true)]
@@ -21,12 +21,12 @@ namespace EstudosAsp.Models
         public string Descricao { get; }
 
         [Column("peso")]
-        public double Peso { get; }
+        private double Peso;
        
         [ForeignKey("ProdutoTipo")]
         [Column("_produto_tipo")]
         public int ProdutoTipoId { get; }
-
+        
         public ProdutoTipo ProdutoTipo { get; set; }
 
         [Column("data_cadastro")]

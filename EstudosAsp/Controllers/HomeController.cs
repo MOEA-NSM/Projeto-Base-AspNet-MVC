@@ -85,6 +85,8 @@ namespace EstudosAsp.Controllers
                 3.2,
                 produtoTipo.Id);
 
+            produto.Peso = 11;
+
             produtoServico.Salvar(produto);
 
         }
