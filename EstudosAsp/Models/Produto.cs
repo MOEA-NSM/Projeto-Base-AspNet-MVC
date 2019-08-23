@@ -18,19 +18,25 @@ namespace EstudosAsp.Models
         [Index(IsUnique = true)]
         [Column("descricao")]
         [MaxLength(40)]
-        public string Descricao { get; set; }
+        public string Descricao { get; }
 
         [Column("peso")]
-        public double Peso { get; set; }
+        public double Peso { get; }
        
         [ForeignKey("ProdutoTipo")]
         [Column("_produto_tipo")]
-        public int ProdutoTipoId { get; set; }
+        public int ProdutoTipoId { get; }
 
         public ProdutoTipo ProdutoTipo { get; set; }
 
         [Column("data_cadastro")]
         public DateTime DataCadastro { get;} = DateTime.Now;
 
+        public Produto(string descricao, double peso, int produtoTipoId)
+        {
+            Descricao = descricao;
+            Peso = peso;
+            ProdutoTipoId = produtoTipoId;
+        }
     }
 }

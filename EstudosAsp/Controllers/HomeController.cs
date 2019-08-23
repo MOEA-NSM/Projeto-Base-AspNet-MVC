@@ -80,10 +80,10 @@ namespace EstudosAsp.Controllers
             DateTime dt = DateTime.Now;
             ProdutoTipo produtoTipo = produtoTipoServico.ObterPorId(1);
 
-            Produto produto = new Produto();
-            produto.Descricao = "Produto: " + dt.ToString("MM/dd/yyyy HH:mm:ss.fff");
-            produto.Peso = 3.2;
-            produto.ProdutoTipoId = produtoTipo.Id;
+            Produto produto = new Produto(
+                "Produto: " + dt.ToString("MM/dd/yyyy HH:mm:ss.fff"),
+                3.2,
+                produtoTipo.Id);
 
             produtoServico.Salvar(produto);
 
