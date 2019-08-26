@@ -174,9 +174,9 @@
     <Compile Include="Migrations\201908211805412_InitialCreate.Designer.cs">
       <DependentUpon>201908211805412_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908222021220_InitialCreate1.cs" />
-    <Compile Include="Migrations\201908222021220_InitialCreate1.Designer.cs">
-      <DependentUpon>201908222021220_InitialCreate1.cs</DependentUpon>
+    <Compile Include="Migrations\201908261207552_InitialCreate1.cs" />
+    <Compile Include="Migrations\201908261207552_InitialCreate1.Designer.cs">
+      <DependentUpon>201908261207552_InitialCreate1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Nivel.cs" />
@@ -253,8 +253,8 @@
     <EmbeddedResource Include="Migrations\201908211805412_InitialCreate.resx">
       <DependentUpon>201908211805412_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908222021220_InitialCreate1.resx">
-      <DependentUpon>201908222021220_InitialCreate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908261207552_InitialCreate1.resx">
+      <DependentUpon>201908261207552_InitialCreate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

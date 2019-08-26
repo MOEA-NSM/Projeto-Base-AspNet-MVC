@@ -12,25 +12,25 @@ namespace EstudosAsp.Models
     {
         [Key]
         [Column("id")]
-        private int Id { get; }
+        public int Id { get; set; }
 
         [Required]
         [Index(IsUnique = true)]
         [Column("descricao")]
         [MaxLength(40)]
-        public string Descricao { get; }
+        public string Descricao { get; set; }
 
         [Column("peso")]
-        private double Peso;
+        public double Peso { get; set; }
        
         [ForeignKey("ProdutoTipo")]
         [Column("_produto_tipo")]
-        public int ProdutoTipoId { get; }
+        public int ProdutoTipoId { get; set; }
         
         public ProdutoTipo ProdutoTipo { get; set; }
 
         [Column("data_cadastro")]
-        public DateTime DataCadastro { get;} = DateTime.Now;
+        public DateTime DataCadastro { get; set; } = DateTime.Now;
 
         public Produto(string descricao, double peso, int produtoTipoId)
         {
